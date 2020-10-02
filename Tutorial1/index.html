@@ -8,17 +8,20 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
-      </div>
-    
+        {{ message }} 
+        <br>
+        {{ mostrarMensaje() }}
+    </div>
+    <br>
+    <div id="app-2">
+        <span v-bind:title="message">
+          Hover your mouse over me for a few seconds
+          to see my dynamically bound title!
+        </span>
+    </div>
+    <br>
 
-<script>
-var app = new Vue({
-    el: '#app',
-    data: {
-    message: 'Hello Vue!'
-    }
-})
-</script>
+
+<script src="app.js"></script>
 </body>
 </html>
