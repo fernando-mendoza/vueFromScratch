@@ -15,8 +15,22 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ name }}</h1>
       <img v-bind:src="img" v-bind:alt="name" />
+      <h1>
+        {{ name }}
+        <span v-if="changePercent > 0">👍</span>
+        <span v-else-if="changePercent < 0 ">👎</span>
+        <span v-else>🤞</span>
+
+        <!--
+        <span v-show="changePercent > 0">👍</span>
+        <span v-show="changePercent < 0">👎</span>
+        <span v-show="changePercent === 0">🤞</span>
+        -->
+        <ul>
+          <li v-for="p in prices" key>{{ p }}</li>
+        </ul>
+      </h1>
     </div>
     <script src="app2.js"></script>
   </body>
